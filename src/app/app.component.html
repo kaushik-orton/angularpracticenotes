@@ -1,0 +1,99 @@
+<!-- NgIf different templates showing based on value with ng-Template-->
+
+<!-- <h6>If example</h6>
+
+<div *ngIf="lessons; then a else b"> 
+<h6>if is true</h6>
+</div> -->
+<!-- ngtemplate place lo comments padthayi, html ele meeda directive apply chetse -> html element atla undi ... daani kinda paina ng template padi daniki directive property binding ithadi andule [ngIf] or [ngForOf] padthayi desugar
+Ngtemplate is angular directive,template.. it is show when a structural directive is applied on it or can be shown by ngt's accesing template reference variable and ngif wrt normal html ele or using ngt's  template reference variable and *ngTemplateOutlet on ng-container   -->
+
+<!-- <ng-template #a> 
+<h6>This is a for true</h6>
+</ng-template>
+
+<ng-template #b> 
+<h6>This is b for false</h6>
+</ng-template>
+
+<ng-template #c> 
+<h6>ng template outlet use</h6>
+</ng-template> -->
+
+<!-- <ng-template [ngIf]='true'>
+  <h1>if with ng template</h1>
+</ng-template> -->
+
+<!-- ngForOf synatx is what we get when ngfor is desugared,ngfor is shorthand,trackBy is used to track with any id or p.key -- if there's new adition to object ui is udated only to that.. if any change in data to p.key -- data is updated.  -->
+<!-- <ng-template ngFor let-it [ngForOf]="item">
+<h6>{{it.name}}</h6>
+</ng-template>
+
+<div>
+<li *ngFor="let i of item;trackBy:namee">
+{{i.name}} || {{i.age}} || {{i.id}}
+</li>
+<button value="click" (click)="c()">click</button>
+</div> -->
+
+
+
+<!-- ng-container can be simply defined as div type in html but this is hidden as shown as comment, comes into play when we apply two directives on same element -->
+
+
+<!-- <ng-container *ngIf="lessons"><h1>if is true in ng-con</h1></ng-container>
+<ng-container *ngIf="true"><p>test</p></ng-container> -->
+
+
+<!--  ngTemplateOutlet can be used as reusable template
+context wrt ng template-> refer https://www.freecodecamp.org/news/everything-you-need-to-know-about-ng-template-ng-content-ng-container-and-ngtemplateoutlet-4b7b51223691/
+-->
+<!-- <ng-container *ngTemplateOutlet="c"></ng-container> -->
+
+<hr>
+
+<!-- ng-content and content projection -->
+
+<!-- 
+  oka component with selector <app-xxx></app-xxx>
+  in this xxx component we have: 
+  <h1>what</h1>
+  <h2>the</h2>
+  <h3>
+  <ng-content></ng-content>
+  </h3>
+  
+  from any other component we can project content into xxx component by:
+  <app-xxx>
+  if we want title or abb or any other we can give using html -> <p>fck</p> <-- this will directly go into ng content tag of component-xxx
+  </app-xxx>
+
+  this is called single content projection
+
+  *multiple projection*
+  <div>
+  <ng-content select='a'></ng-content>
+  </div>
+  <div>
+  <ng-content select='b'></ng-content>
+  </div>
+  <div>
+  <ng-content *no select*></ng-content>
+  </div>
+
+  somewhere in other component
+  <app-xxx>
+  <a> here any image tag or heading or para or buttons will go into 1st div above</a>
+  <b>here any image tag or heading or para or buttons will go into 2nd div above</b>
+  any other tags will go into remaining 3rd div
+  </app-xxx>
+
+-->
+
+
+
+
+
+
+
+
